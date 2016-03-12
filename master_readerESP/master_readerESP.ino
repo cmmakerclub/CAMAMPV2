@@ -80,6 +80,9 @@ void setup() {
     USE_SERIAL.flush();
     delay(1000);
   }
+
+  WiFi.disconnect();
+  WiFi.mode(WIFI_AP);
   //
   //  WiFiMulti.addAP("ESPERT-002", "espertap");
   //  WiFiMulti.addAP("Nat", "12345678");
@@ -129,7 +132,8 @@ void setup() {
       } else {
         string += String(-data) + ",";
       }
-      string += "A";
+     
+      
       if (c8 == 1) {
         string += "V";
       } else {
@@ -142,7 +146,8 @@ void setup() {
       } else {
         string += String(-data) + ",";
       }
-      string += "A";
+    
+      
       if (c8 == 1) {
         string += "V";
       } else {
